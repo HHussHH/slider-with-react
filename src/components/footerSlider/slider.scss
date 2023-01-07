@@ -1,0 +1,67 @@
+.slider{
+  
+    &__inner{
+        display: flex;
+        margin: 180px auto 0;
+        width: 620px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__bg{
+        width: 528px;
+        position: relative;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.50);
+    }
+    &__main{
+        position: absolute;
+        top:-50%;
+        transform: translateY(-50%);
+        color:rgba(255, 255, 255, 0);
+        height: 4px;
+        background-color: #fff;
+        
+    }
+    &__slide{
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 30px;
+        color: #FFF;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        
+        &--prev{
+            &::before{
+                cursor: pointer;
+                content: "";
+                position: absolute;
+                top:50%;
+                right:400px;
+                transform: translateY(-50%);
+                display: block;
+                width: 42px;
+                height: 42px;
+                background:url("../../img/slider/prevArrow.png") center no-repeat;
+                background-size: auto;
+            }
+        }
+
+        &--next{
+            &::after{
+                cursor: pointer;
+                content: "";
+                position: absolute;
+                top:50%;
+                left:400px;
+                transform: translateY(-50%);
+                display: block;
+                width: 42px;
+                height: 42px;
+                background:url("../../img/slider/nextArrow.png") center no-repeat;
+                background-size: auto;
+                
+            }
+        }
+    }
+}
+
